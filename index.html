@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROFED 10 Reviewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Dashboard Screen -->
+    <div id="dashboard-screen" class="page-container">
+        <h1>PROFED 10: Reviewer Created by JIAN </h1>
+        
+        <!-- Scoreboard Stats -->
+        <div class="stats-container">
+            <div class="stat-box">
+                <span id="stat-answered" class="stat-num">0</span><br>
+                <span class="stat-label">ANSWERED</span>
+            </div>
+            <div class="stat-box">
+                <span id="stat-correct" class="stat-num correct-text">0</span><br>
+                <span class="stat-label">CORRECT</span>
+            </div>
+            <div class="stat-box">
+                <span id="stat-incorrect" class="stat-num incorrect-text">0</span><br>
+                <span class="stat-label">INCORRECT</span>
+            </div>
+            <div class="stat-box">
+                <span id="stat-accuracy" class="stat-num">0%</span><br>
+                <span class="stat-label">ACCURACY</span>
+            </div>
+        </div>
+
+        <p>Select a quiz mode to begin your review:</p>
+        <div class="mode-buttons">
+            <button id="mode-mc-btn">Multiple Choice</button>
+            <button id="mode-tf-btn">True or False</button>
+            <button id="mode-ident-btn">Identification</button>
+        </div>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="page-container hidden">
+        <div id="quiz-header">
+            <span id="question-counter">Question 1</span>
+            <button id="return-btn" class="text-btn">← Dashboard</button>
+        </div>
+        
+        <h2 id="question-text">Question goes here...</h2>
+
+        <div id="options-container"></div>
+
+        <div id="identification-container" class="hidden">
+            <input type="text" id="ident-input" placeholder="Type your answer here..." autocomplete="off">
+            <button id="submit-ident-btn">Submit Answer</button>
+        </div>
+
+        <!-- Explanation Box -->
+        <div id="explanation-box" class="hidden">
+            <h3 id="explanation-title"></h3>
+            <p id="explanation-text"></p>
+        </div>
+
+        <button id="next-btn" class="hidden">Next Question →</button>
+    </div>
+    
+    <!-- Final Result Screen -->
+    <div id="result-screen" class="page-container hidden">
+        <h1>Quiz Complete!</h1>
+        <h2 id="final-score">You scored 0 out of 0</h2>
+        <button id="restart-btn">Return to Dashboard</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
